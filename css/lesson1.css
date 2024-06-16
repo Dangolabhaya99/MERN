@@ -1,0 +1,9 @@
+#lorem{
+    color: wheat;
+    background-color: black;
+    border: 2px solid red;
+}
+* {
+font-size: 16px;
+color: red;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PP BookStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>PP BookStore</h1>
+    </header>
+    
+    <div class="container">
+        <div class="search-con">
+            <input type="text" id="searchInput" placeholder="Search Book you want...">
+            <button id="searchButton">Search</button>
+        </div>
+        <div class="add-con">
+            <input type="text" id="newBookTitle" placeholder="Add Book For store...">
+            <input type="text" id="newBookAuthor" placeholder="Author">
+            <button id="addBookButton">Add Book</button>
+        </div>
+        <div class="booklist-con" id="books">
+            <h3>Book Lists</h3>
+            <ul id="book-list">
+                <!-- Books will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

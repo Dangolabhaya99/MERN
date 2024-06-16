@@ -1,0 +1,56 @@
+/* Descendent Selector */
+/* .main-div h1{
+    background-color: rgb(118, 131, 131);
+    color: aliceblue;
+} */
+/* Parent Selector */
+/* .main-div > h1{
+    background-color: rgb(81, 95, 18);
+    color: rgb(90, 134, 173);
+} */
+/* Adjacent Sibling  */
+/* h1+h2{
+    background-color: orange;
+    color:aliceblue;
+} */
+/* General Sibling */
+/* h1~h2{
+    background-color: orange;
+    color:aliceblue;
+} */
+/* body{
+    background-image: url("Balambu\ ft_final.-Model_page-0001\ \(1\).jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+} */
+/* .main-div{
+    color: bisque;
+    width: auto;
+    background-image: url("Balambu\ ft_final.-Model_page-0001\ \(1\).jpg");
+} */
+/* .demo{
+    display: none;
+    visibility: hidden;
+} */
+.main-div{
+    background-color: red;
+    width: 800  px;
+    height: 800px;
+    position: sticky;
+}
+h1{
+    background-color: black;
+    color: aliceblue;
+    position: sticky;
+    position: -webkit-sticky;
+}
+.sec{
+    background-color: blueviolet;
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+    /* right: 50%;
+    left: 50%;
+    transform: translate(50%, 50%); */
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 70px;
+            margin-left: 60px;
+            gap: 10px;
+        }
+
+        .item1,
+        .item2,
+        .item3{
+            width: 280px;
+            height: 420px;
+            padding: 10px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .item1 {
+            background-color: rgb(97, 91, 102);
+            grid-column: 1/2;
+            grid-row: 1;
+
+        }
+
+        .item2 {
+            background-color: rgb(115, 108, 122);
+            grid-column: 2/3;
+            grid-row: 1;
+
+        }
+        .item3 {
+            background-color: rgb(115, 108, 122);
+            grid-column: 3/4;
+            grid-row: 1;
+
+        }
+        h4{
+            background-color: black;
+            color: rgb(255, 255, 255);
+            height: 50px;
+            text-align: center;
+            padding-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <img src="../HTML/Restaurant/restu.jpg" alt="">
+            <h1>Card 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h4>Read Me</h4>
+        </div>
+        <div class="item2">
+            <img src="../HTML/Restaurant/restu.jpg" alt="">
+            <h1>Card 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h4>Read Me</h4>
+        </div>
+        <div class="item3">
+            <img src="../HTML/Restaurant/restu.jpg" alt="">
+            <h1>Card 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h4>Read Me</h4>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript HTML Events</h2>
+    <p>Click The button.</p>
+    <button onclick="displayDate()">The time is?</button>
+    <button onmouseover="displayDate()">mouse over</button>
+    <button onmouseout = "displaynone()">mouse out</button>
+    <button id="ontop">Click ME!</button>
+    <input type="text" id="keyboard" placeholder="use any key owrd">
+    <p id="demo"></p>
+    <img src="/HTML/download.jpeg" alt="">
+    <script>
+        function displayDate(){
+            document.getElementById("demo").innerHTML = Date();
+        }
+        function displaynone(){
+            document.getElementById("demo").innerHTML ="" ;
+        }
+        // keyboard.addEventListener('keydown', function(event){
+        //     console.log(event.key)
+        // });
+        keyboard.addEventListener('change', function(){
+            console.log("Change")
+        });
+        ontop.addEventListener('click',function(){
+            // alert('Button Clicked!');
+            ontop.style.color ="red";
+        });
+        window.addEventListener('DOMContentLoaded', function(){
+            console.log("DOM");
+        });
+        window.addEventListener('load', function(){
+            console.log("Loadeed");
+        });
+    </script>
+</body>
+</html>

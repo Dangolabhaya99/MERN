@@ -1,0 +1,50 @@
+/* #div-1,#div-2,#Para{
+    color: red;
+    border: 2px solid yellow;
+    background-color: rgb(69, 155, 133); 
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: rgb(77, 216, 22);
+}
+a:hover{
+    color: rgb(70, 4, 4);
+}
+#Para::first-letter{
+    text-transform: uppercase;
+}
+#Para::first-line{
+    font-size: 50px;
+}
+input[type="text"]{
+    color: wheat;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid green;
+    font-size: 16px;
+}
+#check:first-child{
+    color: rgb(20, 211, 20);
+    font-weight: bold;
+}
+#check:last-child{
+    color: rgb(158, 24, 24);
+    font-weight: bold;
+}
+#check:nth-child(3){
+    color: rgb(184, 95, 12);
+    font-weight: bold;
+}
+#check:nth-child(odd){
+    color: rgb(55, 43, 226);
+    font-weight: bold;
+} 
+#check:nth-child(even){
+    color: rgb(168, 11, 108);
+    font-weight: bold;
+}
+input:focus {
+    border: 2px solid blue;
+    background-color: lightyellow;} */

@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+}
+.navbar{
+    justify-content: space-between;
+    display: flex;
+    padding: 0 20px;
+}
+.navlist{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: end;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 14px 20px;
+    color: white;
+    /* text-decoration: none; */
+}
+
+nav ul li:hover {
+    background-color: #575757;
+}
+#main img {
+    height: 50px;
+    width: auto;
+    border: powderblue;
+    border-radius: 3px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Haven</title>
+    <style>
+        .favorite {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>The Book Haven</h1>
+    </header>
+
+    <main class="main-content">
+        <div class="book-actions">
+            <button onclick="addBook()">Add Book</button>
+            <button onclick="removeBook()">Remove Last Book</button>
+            <input type="text" id="search-bar" placeholder="Search books...">
+            <button onclick="searchBook()">Search</button>
+            <button onclick="clearSearchHighlights()">Clear Highlights</button>
+        </div>
+        
+        <ul id="book-list" class="book-list">
+            <!-- Books will be dynamically added here -->
+        </ul>
+    </main>
+
+    <script>
+        // Question 1: Dynamic Book Addition
+        function addBook() {
+            const bookTitle = prompt("Enter the book title:");
+            if (bookTitle) {
+                const bookList = document.getElementById('book-list');
+                const newBookItem = document.createElement('li');
+                newBookItem.textContent = bookTitle;
+                newBookItem.addEventListener('click', toggleFavorite);
+                bookList.appendChild(newBookItem);
+            }
+        }
+
+        // Question 2: Book Search Functionality
+        function searchBook() {
+            const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+            const bookItems = document.querySelectorAll('#book-list li');
+            bookItems.forEach(item => {
+                if (item.textContent.toLowerCase().includes(searchTerm)) {
+                    item.style.backgroundColor = 'yellow';
+                } else {
+                    item.style.backgroundColor = '';
+                }
+            });
+        }
+
+        // Question 3: Remove Selected Book
+        function removeBook() {
+            const bookList = document.getElementById('book-list');
+            const lastBook = bookList.lastElementChild;
+            if (lastBook && confirm("Are you sure you want to remove the last book?")) {
+                bookList.removeChild(lastBook);
+            }
+        }
+
+        // Question 4: Mark as Favorite
+        function toggleFavorite(event) {
+            const bookItem = event.target;
+            bookItem.classList.toggle('favorite');
+        }
+
+        // Question 5: Clear Search Highlights
+        function clearSearchHighlights() {
+            const bookItems = document.querySelectorAll('#book-list li');
+            bookItems.forEach(item => {
+                item.style.backgroundColor = '';
+            });
+        }
+    </script>
+</body>
+</html>
