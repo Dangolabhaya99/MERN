@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Progress Bar</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            display: flex;
+            width: 300px;
+            height: 20px;
+            border: 2px solid black;
+        }
+        .progess{
+            justify-content: center;
+            background-color: rgb(69, 238, 69);
+            height: 20px;
+            width: 300px;
+            animation: progressive 10s ease forwards ;
+        }
+        @keyframes progressive {
+            from{
+                transform: translateX(-100%);
+            }
+            to{
+                transform: translateX(0%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progess"></div>
+    </div>
+</body>
+</html>

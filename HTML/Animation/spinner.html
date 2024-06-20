@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Spinner</title>
+    <style>
+        body{
+            display: flex;
+        }
+        .btn{
+            height: 50px;
+            width: 50px;
+            background-color: rgb(255, 255, 255);
+            border: 3px solid rgba(0, 0, 0, 0.952);
+            border-top: 5px solid rgb(255, 255, 255);
+            border-radius: 30px;
+            animation: spinner 1s infinite;
+        }
+        @keyframes spinner {
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="btn"></button>
+</body>
+</html>

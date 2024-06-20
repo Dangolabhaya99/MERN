@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Card</title>
+    <style>
+        .card {
+            display: flex;
+            justify-content: center;
+            transform-style: preserve-3d;
+        }
+
+        .card-back,
+        .card-front {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .card:hover{
+            animation: flip 3s;
+        }
+
+        .card-back {
+            text-align: center;
+            background-color: rgb(227, 240, 172);
+            transform: rotateY(180deg);
+        }
+        @keyframes flip {
+            to {
+                transform: rotateY(180deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-front">
+            <img src="coconut.jpg" height="300px" width="300px" alt="image">
+        </div>
+        <div class="card-back">
+            <h3>Coconut</h3>
+            <p>The term "coconut" (or the archaic "cocoanut")
+                can refer to the whole coconut palm, the seed,
+                or the fruit, which botanically is a drupe,
+                not a nut.</p>
+        </div>
+    </div>
+</body>
+
+</html>

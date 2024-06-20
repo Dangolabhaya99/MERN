@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsating Circle</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+        }
+        .btn{
+            height: 50px;
+            width: 50px;
+            background-color: cornflowerblue;
+            padding: 10px;
+            border-radius: 30px;
+            border: 2px solid black;
+            animation: pulsating 3s infinite;
+        }
+        @keyframes pulsating {
+            from{
+                height: 50px;
+                width: 50px;
+                background-color: cornflowerblue;
+            }
+            to{
+                height: 60px;
+                width: 60px;
+                background-color: rgb(43, 201, 77);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">HI</button>
+</body>
+</html>

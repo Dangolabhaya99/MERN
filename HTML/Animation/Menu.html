@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Accordion Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .option {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 15px;
+            background-color: white;
+        }
+
+        .content p {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="option">
+            <button class="btn">Introduction</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad explicabo dolore libero est
+                    temporibus distinctio non. Non labore illum distinctio alias, repellat quibusdam nisi nobis adipisci
+                    provident, magnam aperiam accusamus aspernatur unde vero sed harum praesentium pariatur quasi
+                    explicabo perferendis deleniti eius officiis! Quis ipsa sint cum consequuntur expedita rerum tempore
+                    nostrum magnam.</p>
+            </div>
+        </div>
+        <div class="option">
+            <button class="btn">Body</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem qui temporibus deserunt modi
+                    fugiat laudantium quidem fuga officia accusantium distinctio praesentium cumque labore, rem magnam
+                    repellendus quisquam perferendis possimus facere!</p>
+            </div>
+        </div>
+        <div class="option">
+            <button class="btn">Conclusion</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, perferendis aperiam ad cumque
+                    doloremque hic vero animi eius voluptatum assumenda culpa et, neque deleniti odit similique repellat
+                    blanditiis maiores eaque quam asperiores maxime soluta. Vel quas, dicta impedit ab pariatur atque,
+                    magnam tempore suscipit sapiente vitae ea vero molestiae! Quae, aut minus! Repellendus provident
+                    omnis ullam quo officia. Iste nobis repellendus illum impedit sed pariatur deleniti aliquam quam
+                    aspernatur!</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const headers = document.querySelectorAll('.btn');
+
+            headers.forEach(header => {
+                header.addEventListener('click', function () {
+                    const openItem = document.querySelector('.content.show');
+                    const content = this.nextElementSibling;
+
+                    if (openItem && openItem !== content) {
+                        openItem.style.maxHeight = null;
+                        openItem.classList.remove('show');
+                    }
+
+                    if (content.classList.contains('show')) {
+                        content.style.maxHeight = null;
+                        content.classList.remove('show');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.classList.add('show');
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

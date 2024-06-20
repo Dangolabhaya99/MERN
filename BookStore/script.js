@@ -54,14 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const bookItem = event.target.parentElement;
         bookItem.classList.toggle('favorite');
     }
-
-    function clearSearchHighlights() {
-        const bookItems = bookList.querySelectorAll('li');
-        bookItems.forEach(item => {
-            item.style.backgroundColor = '';
-        });
-    }
-
     addBookButton.addEventListener('click', addBook);
     searchButton.addEventListener('click', searchBook);
 });
