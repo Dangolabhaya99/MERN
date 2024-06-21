@@ -1,0 +1,125 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(197, 219, 212);
+    box-shadow: 20px solid black;
+}
+
+.navlist ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    padding-right: 5px;
+    align-items: center;
+}
+
+.navlist a {
+    color: black;
+    text-decoration: none;
+}
+
+.mode {
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.logo {
+    padding: 6px 0px 3px 6px;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel img {
+    position: absolute;
+    left: 0%;
+    animation: slider 4s ease infinite;
+    transition: 1s ease-in-out;
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-img:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.carousel-img:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.carousel-img:nth-child(3) {
+    animation-delay: 3s;
+}
+
+@keyframes slider {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.cards {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-con {
+    border: 1px solid black;
+    padding: 5px;
+    width: 350px;
+    text-align: justify;
+}
+
+body.dark-mode {
+    transition: 3s;
+    background-color: #292828;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    transition: 3s;
+    background-color: #333;
+    color: #ffffff;
+}
+
+body.dark-mode .navlist a {
+    transition: 3s;
+    color: #ffffff;
+}
+
+body.dark-mode .card-con {
+    transition: 3s;
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #333;
+}
